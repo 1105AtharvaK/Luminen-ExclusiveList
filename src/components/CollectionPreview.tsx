@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
+import { ChevronLeft, ChevronRight, Eye, Crown } from "lucide-react";
 import collection1 from "@/assets/collection-1.jpg";
 import collection2 from "@/assets/collection-2.jpg";
 import collection3 from "@/assets/collection-3.jpg";
@@ -31,22 +31,22 @@ const CollectionPreview = () => {
     {
       id: 1,
       image: collection1,
-      alt: "Streetwear Collection Piece 1"
+      alt: "Luxury Collection Piece 1"
     },
     {
       id: 2,
       image: collection2,
-      alt: "Streetwear Collection Piece 2"
+      alt: "Luxury Collection Piece 2"
     },
     {
       id: 3,
       image: collection3,
-      alt: "Streetwear Collection Piece 3"
+      alt: "Luxury Collection Piece 3"
     },
     {
       id: 4,
       image: collection4,
-      alt: "Streetwear Collection Piece 4"
+      alt: "Luxury Collection Piece 4"
     }
   ];
 
@@ -63,11 +63,11 @@ const CollectionPreview = () => {
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-16">
-          <h2 className="font-space text-3xl sm:text-5xl md:text-6xl font-bold text-accent-gradient mb-4 sm:mb-6 uppercase tracking-tight break-words">
-            SNEAK PEEK
+          <h2 className="font-luxury text-3xl sm:text-5xl md:text-6xl font-bold text-accent-gradient mb-4 sm:mb-6 uppercase tracking-tight break-words">
+            PREVIEW
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-md sm:max-w-3xl mx-auto font-medium leading-relaxed uppercase tracking-wide">
-            FIRST LOOK AT OUR STREETWEAR REVOLUTION
+          <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-md sm:max-w-3xl mx-auto font-light leading-relaxed uppercase tracking-wide">
+            FIRST LOOK AT OUR LUXURY COLLECTION
           </p>
         </div>
         {/* Collection Grid for desktop/tablet only */}
@@ -82,19 +82,19 @@ const CollectionPreview = () => {
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className={`w-full h-full object-cover transition-streetwear group-hover:scale-110 grayscale group-hover:grayscale-0 ${!joined ? 'filter blur-lg opacity-75' : 'filter '}${joined ? 'group-hover:blur-0 group-hover:opacity-100' : ''}`}
+                  className={`w-full h-full object-cover transition-streetwear group-hover:scale-110 ${!joined ? 'filter blur-lg opacity-75' : 'filter '}${joined ? 'group-hover:blur-0 group-hover:opacity-100' : ''}`}
                   style={!joined ? {} : { transition: 'filter 0.4s, opacity 0.4s' }}
                 />
                 {/* Overlay */}
                 {!joined && (
                   <div className="absolute inset-0 flex items-center justify-center bg-background/60">
-                    <p className="text-base sm:text-lg font-bold text-accent-orange uppercase tracking-wider text-center px-2">Join Waitlist to Reveal</p>
+                    <p className="text-base sm:text-lg font-bold text-accent-orange uppercase tracking-wider text-center px-2">Join Elite to Reveal</p>
                   </div>
                 )}
                 {joined && (
                   <div className="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-streetwear flex items-end justify-center p-4 sm:p-6">
                     <div className="text-center text-foreground">
-                      <Eye className="w-6 h-6 mx-auto mb-2 text-accent-orange" />
+                      <Crown className="w-6 h-6 mx-auto mb-2 text-accent-orange" />
                       <p className="text-xs sm:text-sm font-bold tracking-wider uppercase">
                         REVEALED
                       </p>
@@ -120,19 +120,19 @@ const CollectionPreview = () => {
                       <img
                         src={item.image}
                         alt={item.alt}
-                        className={`w-full h-full object-cover grayscale ${!joined ? 'filter blur-lg opacity-75' : ''}`}
+                        className={`w-full h-full object-cover ${!joined ? 'filter blur-lg opacity-75' : ''}`}
                         style={!joined ? {} : { transition: 'filter 0.4s, opacity 0.4s' }}
                       />
                       {/* Overlay */}
                       {!joined && (
                         <div className="absolute inset-0 flex items-center justify-center bg-background/60">
-                          <p className="text-base sm:text-lg font-bold text-accent-orange uppercase tracking-wider text-center px-2">Join Waitlist to Reveal</p>
+                          <p className="text-base sm:text-lg font-bold text-accent-orange uppercase tracking-wider text-center px-2">Join Elite to Reveal</p>
                         </div>
                       )}
                       {joined && (
                         <div className="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-0 transition-streetwear flex items-end justify-center p-4 sm:p-6">
                           <div className="text-center text-foreground">
-                            <Eye className="w-6 h-6 mx-auto mb-2 text-accent-orange" />
+                            <Crown className="w-6 h-6 mx-auto mb-2 text-accent-orange" />
                             <p className="text-xs sm:text-sm font-bold tracking-wider uppercase">
                               REVEALED
                             </p>

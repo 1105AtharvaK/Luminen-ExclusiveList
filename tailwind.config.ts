@@ -62,19 +62,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Streetwear Design System Extensions
+				// Luxury Design System Extensions
 				'background-dark': 'hsl(var(--background-dark))',
 				'surface-elevated': 'hsl(var(--surface-elevated))',
 				'text-primary': 'hsl(var(--text-primary))',
 				'text-secondary': 'hsl(var(--text-secondary))',
-				'accent-orange': 'hsl(var(--accent-orange))',
-				'accent-blue': 'hsl(var(--accent-blue))'
+				'accent-gold': 'hsl(var(--accent-gold))',
+				'accent-purple': 'hsl(var(--accent-purple))'
 			},
 			fontFamily: {
-				'sans': ['Space Grotesk', 'sans-serif'],
-				'space': ['Space Grotesk', 'sans-serif'],
+				'sans': ['Inter', 'sans-serif'],
+				'serif': ['Playfair Display', 'serif'],
 				'inter': ['Inter', 'sans-serif'],
-				'mono': ['Space Grotesk', 'monospace'],
+				'mono': ['Inter', 'monospace'],
+				'mea-culpa': ['Dancing Script', 'Great Vibes', 'cursive'],
+				'luxury': ['Dancing Script', 'Great Vibes', 'Playfair Display', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

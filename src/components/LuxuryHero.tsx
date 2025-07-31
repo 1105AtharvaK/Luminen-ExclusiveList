@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Zap, Users, Timer, Flame } from "lucide-react";
+import { ArrowDown, Zap, Users, Timer, Crown, Sparkles } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
 
 const PROGRESS_STEP = 100;
@@ -57,27 +57,27 @@ const LuxuryHero = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 text-center">
         {/* Header Badge */}
         <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 bg-surface-elevated rounded-full shadow-glow animate-fade-in-delayed border border-accent">
-          <Flame className="w-5 h-5 text-accent-orange mr-2 sm:mr-3" />
+          <Crown className="w-5 h-5 text-accent-orange mr-2 sm:mr-3" />
           <span className="text-xs sm:text-sm font-bold text-foreground tracking-wider uppercase">
-            STREETWEAR EXCLUSIVE
+            LUXURY EXCLUSIVE
           </span>
         </div>
         {/* Main Heading */}
-        <h1 className="font-space text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-accent-gradient mb-6 sm:mb-8 animate-fade-up tracking-tight break-words">
+        <h1 className="font-luxury text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-accent-gradient mb-6 sm:mb-8 animate-fade-up tracking-tight break-words">
           LUMINEN
         </h1>
-        <p className="text-base sm:text-xl md:text-2xl text-text-secondary mb-8 sm:mb-12 font-medium max-w-2xl sm:max-w-4xl mx-auto leading-relaxed animate-fade-up delay-200">
-          STREETWEAR REDEFINED. MINIMALISM AMPLIFIED.
+        <p className="text-base sm:text-xl md:text-2xl text-text-secondary mb-8 sm:mb-12 font-light max-w-2xl sm:max-w-4xl mx-auto leading-relaxed animate-fade-up delay-200">
+          ELEGANCE REDEFINED. LUXURY AMPLIFIED.
         </p>
         {/* Live Waitlist Counter */}
         <div className="w-full max-w-md sm:max-w-2xl mx-auto mb-8 sm:mb-12 animate-fade-up delay-300">
           <div className="bg-surface-elevated rounded-xl p-4 sm:p-8 shadow-dark border border-accent flex flex-col gap-4">
             <div className="flex items-center justify-center mb-2">
               <Timer className="w-5 h-5 text-accent-orange mr-2" />
-              <span className="text-lg sm:text-xl text-foreground font-bold uppercase tracking-wide">WAITLIST MEMBERS</span>
+              <span className="text-lg sm:text-xl text-foreground font-bold uppercase tracking-wide">EXCLUSIVE MEMBERS</span>
             </div>
             <div className="flex items-center justify-center">
-              <span className="text-3xl sm:text-4xl text-accent-orange font-mono font-bold">
+              <span className="text-3xl sm:text-4xl text-accent-orange font-serif font-bold">
                 {waitlistCount}/{getCurrentMax()}
               </span>
             </div>
@@ -89,8 +89,8 @@ const LuxuryHero = () => {
             onClick={scrollToWaitlist}
             className="bg-accent-gradient text-background font-bold text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-xl hover-scale shadow-glow border-0 uppercase tracking-wide"
           >
-            <Zap className="mr-2 w-5 h-5" />
-            JOIN THE WAITLIST
+            <Sparkles className="mr-2 w-5 h-5" />
+            JOIN THE ELITE
             <ArrowDown className="ml-2 w-5 h-5" />
           </Button>
         </div>
@@ -99,7 +99,7 @@ const LuxuryHero = () => {
           <div className="flex items-center">
             <Users className="w-4 h-4 text-text-secondary mr-2" />
             <span className="text-xs sm:text-sm text-text-secondary font-medium uppercase tracking-wide">
-              TRUSTED BY STREETWEAR CULTURE
+              TRUSTED BY LUXURY CONNOISSEURS
             </span>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { CheckCircle, Mail, Phone, Lock, Zap, Crown, Flame } from "lucide-react";
+import { CheckCircle, Mail, Phone, Lock, Sparkles, Crown, Diamond } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
 // import emailjs from 'emailjs-com'; // Uncomment after EmailJS setup
 
@@ -62,7 +62,7 @@ const WaitlistForm = ({ onJoin, isSubmitted: isSubmittedProp, joined }: Waitlist
     setIsSubmitted(true);
     setIsLoading(false);
     if (onJoin) onJoin();
-    toast({ title: "Welcome to Luminen", description: "You've successfully joined our exclusive waitlist." });
+    toast({ title: "Welcome to Luminen", description: "You've successfully joined our exclusive elite." });
   };
 
   if (joined || isSubmittedProp || isSubmitted) {
@@ -74,22 +74,22 @@ const WaitlistForm = ({ onJoin, isSubmitted: isSubmittedProp, joined }: Waitlist
               <CheckCircle className="w-10 h-10 text-background" />
             </div>
             
-            <h2 className="font-space text-4xl font-bold text-accent-gradient mb-4 uppercase tracking-tight">
+            <h2 className="font-luxury text-4xl font-bold text-accent-gradient mb-4 uppercase tracking-tight">
               WELCOME TO LUMINEN
             </h2>
             
-            <p className="text-lg text-text-secondary mb-8 leading-relaxed font-medium">
-              YOU'RE NOW PART OF AN EXCLUSIVE COMMUNITY WHO WILL BE THE FIRST TO EXPERIENCE OUR STREETWEAR REVOLUTION.
+            <p className="text-lg text-text-secondary mb-8 leading-relaxed font-light">
+              YOU'RE NOW PART OF AN EXCLUSIVE ELITE WHO WILL BE THE FIRST TO EXPERIENCE OUR LUXURY COLLECTION.
             </p>
             
             <div className="space-y-4 text-left max-w-md mx-auto">
               <div className="flex items-center text-text-secondary">
-                <Flame className="w-5 h-5 text-accent-orange mr-3" />
+                <Diamond className="w-5 h-5 text-accent-orange mr-3" />
                 <span className="font-medium uppercase tracking-wide">EARLY ACCESS TO THE FULL COLLECTION</span>
               </div>
               <div className="flex items-center text-text-secondary">
                 <Crown className="w-5 h-5 text-accent-blue mr-3" />
-                <span className="font-medium uppercase tracking-wide">EXCLUSIVE MEMBER PRICING (10% OFF)</span>
+                <span className="font-medium uppercase tracking-wide">EXCLUSIVE MEMBER PRICING (15% OFF)</span>
               </div>
             </div>
             
@@ -107,25 +107,25 @@ const WaitlistForm = ({ onJoin, isSubmitted: isSubmittedProp, joined }: Waitlist
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 mb-8 bg-surface-elevated rounded-full border border-accent shadow-glow">
-            <Zap className="w-5 h-5 text-accent-orange mr-3" />
+            <Sparkles className="w-5 h-5 text-accent-orange mr-3" />
             <span className="text-sm font-bold text-foreground tracking-wider uppercase">
-              STREETWEAR EXCLUSIVE
+              LUXURY EXCLUSIVE
             </span>
           </div>
-          <h2 className="font-space text-5xl md:text-6xl lg:text-7xl font-bold text-accent-gradient mb-8 uppercase tracking-tight">
-            JOIN THE REVOLUTION
+          <h2 className="font-luxury text-5xl md:text-6xl lg:text-7xl font-bold text-accent-gradient mb-8 uppercase tracking-tight">
+            JOIN THE ELITE
           </h2>
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto font-medium leading-relaxed mb-12 uppercase tracking-wide">
-            SECURE YOUR PLACE IN THE FUTURE OF STREETWEAR
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto font-light leading-relaxed mb-12 uppercase tracking-wide">
+            SECURE YOUR PLACE IN THE FUTURE OF LUXURY FASHION
           </p>
           <div className="max-w-2xl mx-auto">
             <Card className="shadow-dark border border-accent bg-surface-elevated">
               <CardHeader className="text-center pb-6">
-                <h3 className="font-space text-3xl font-bold text-accent-gradient uppercase tracking-tight">
+                <h3 className="font-luxury text-3xl font-bold text-accent-gradient uppercase tracking-tight">
                   RESERVE YOUR ACCESS
                 </h3>
                 <p className="text-text-secondary font-medium uppercase tracking-wide">
-                  JOIN THE EXCLUSIVE STREETWEAR COMMUNITY
+                  JOIN THE EXCLUSIVE LUXURY COMMUNITY
                 </p>
               </CardHeader>
               <CardContent>
@@ -197,7 +197,7 @@ const WaitlistForm = ({ onJoin, isSubmitted: isSubmittedProp, joined }: Waitlist
                     className="w-full h-16 bg-accent-gradient text-background font-bold text-lg rounded-xl hover-scale shadow-glow border-0 uppercase tracking-wide"
                     disabled={isLoading}
                   >
-                    {isLoading ? "JOINING..." : "JOIN WAITLIST"}
+                    {isLoading ? "JOINING..." : "JOIN ELITE"}
                   </Button>
                   <p className="text-xs text-text-secondary text-center leading-relaxed font-medium uppercase tracking-wide">
                     BY JOINING, YOU AGREE TO RECEIVE EXCLUSIVE UPDATES. YOUR INFORMATION IS PROTECTED AND NEVER SHARED.
@@ -211,20 +211,20 @@ const WaitlistForm = ({ onJoin, isSubmitted: isSubmittedProp, joined }: Waitlist
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="bg-surface-elevated rounded-xl p-8 border border-accent/20 hover-scale">
             <div className="flex items-center mb-4">
-              <Flame className="w-8 h-8 text-accent-orange mr-4" />
-              <h4 className="font-space font-bold text-foreground uppercase tracking-wide text-xl">FIRST ACCESS</h4>
+              <Diamond className="w-8 h-8 text-accent-orange mr-4" />
+              <h4 className="font-serif font-bold text-foreground uppercase tracking-wide text-xl">FIRST ACCESS</h4>
             </div>
-            <p className="text-text-secondary font-medium leading-relaxed uppercase tracking-wide">
-              BE AMONG THE FIRST 500 TO EXPLORE OUR STREETWEAR COLLECTION BEFORE PUBLIC RELEASE.
+            <p className="text-text-secondary font-light leading-relaxed uppercase tracking-wide">
+              BE AMONG THE FIRST 500 TO EXPLORE OUR LUXURY COLLECTION BEFORE PUBLIC RELEASE.
             </p>
           </div>
           <div className="bg-surface-elevated rounded-xl p-8 border border-accent/20 hover-scale">
             <div className="flex items-center mb-4">
               <Crown className="w-8 h-8 text-accent-blue mr-4" />
-              <h4 className="font-space font-bold text-foreground uppercase tracking-wide text-xl">EXCLUSIVE PRICING</h4>
+              <h4 className="font-serif font-bold text-foreground uppercase tracking-wide text-xl">EXCLUSIVE PRICING</h4>
             </div>
-            <p className="text-text-secondary font-medium leading-relaxed uppercase tracking-wide">
-              ENJOY 10% OFF YOUR FIRST PURCHASE AND ACCESS TO MEMBER-ONLY PRICING.
+            <p className="text-text-secondary font-light leading-relaxed uppercase tracking-wide">
+              ENJOY 15% OFF YOUR FIRST PURCHASE AND ACCESS TO MEMBER-ONLY PRICING.
             </p>
           </div>
         </div>
